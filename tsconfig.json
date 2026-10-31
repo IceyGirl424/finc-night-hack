@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "lib": [
-      "ESNext"
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
     ],
     "target": "ESNext",
     "module": "Preserve",
@@ -29,6 +31,8 @@
   },
   "include": [
     "src/**/*",
+    "app/**/*",
+    "convex/**/*",
     ".next/types/**/*.ts"
   ],
   "exclude": [
