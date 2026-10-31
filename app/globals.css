@@ -1,0 +1,60 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0a0a0f;
+  --surface: #13131a;
+  --surface2: #1c1c28;
+  --border: #2a2a3e;
+  --text: #e8e8f0;
+  --text-muted: #6b6b8a;
+  --accent: #a78bfa;
+  --accent2: #34d399;
+}
+
+html, body { height: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "SF Mono", "Fira Code", "Cascadia Code", ui-monospace, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.1; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px var(--glow-color, #a78bfa), 0 0 60px var(--glow-color, #a78bfa44); }
+  50% { box-shadow: 0 0 40px var(--glow-color, #a78bfa), 0 0 100px var(--glow-color, #a78bfa66); }
+}
+
+@keyframes wave-move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  25% { opacity: 0.6; transform: scale(1.05); }
+  75% { opacity: 0.8; transform: scale(0.97); }
+}
+
+@keyframes fade-in-out {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

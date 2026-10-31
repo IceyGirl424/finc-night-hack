@@ -5,14 +5,25 @@
   "type": "module",
   "scripts": {
     "start": "tsx src/index.ts",
-    "dev": "tsx watch src/index.ts"
+    "dev:bot": "tsx watch src/index.ts",
+    "dev:web": "next dev",
+    "dev": "concurrently -n bot,web -c magenta,cyan \"npm run dev:bot\" \"npm run dev:web\"",
+    "build": "next build",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "spectrum-ts": "^12.14.0"
+    "@anthropic-ai/sdk": "^1.3.0",
+    "concurrently": "^10.0.6",
+    "convex": "^1.49.0",
+    "next": "^15.5.28",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "spectrum-ts": "^12.14.0",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^22",
-    "tsx": "^4"
+    "tsx": "^4",
+    "typescript": "^5"
   }
 }
